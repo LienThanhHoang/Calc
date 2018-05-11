@@ -49,7 +49,7 @@ class ViewController: UIViewController {
                 label.text = label.text! + "*"
                 openW = 0
             }
-            else if (sender.tag == 17 && closeW == 1)
+            else if (sender.tag == 17)
             {
                 label.text = label.text! + "-"
                 openW = 0
@@ -59,7 +59,7 @@ class ViewController: UIViewController {
                 label.text = label.text! + "+"
                 openW = 0
             }
-            else if (sender.tag == 11 )
+            else if (sender.tag == 11)
             {
                 label.text = label.text! + "."
             }
@@ -106,8 +106,8 @@ class ViewController: UIViewController {
             let currentText = label.text
             let expression = NSExpression(format: currentText!)
             let mathValue = expression.expressionValue(with: nil, context: nil) as! NSNumber
-            label.text = String(describing: mathValue)
             //label.text = String(format: "%.2f", mathValue)
+            label.text = String(describing: mathValue)
             performingMath = true
         }
     }
